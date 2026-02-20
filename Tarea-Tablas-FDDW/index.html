@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de prueba de HTML</title>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="NombreUsuario">Nombre </label>
+        <input type="text" id="NombreUsuario" name="NombreUsuario" required>
+        <br><br>
+        <label for="EmailUsuario">Email </label>
+        <input type="email" id="EmailUsuario" name="EmailUsuario" required>
+        <br><br>
+        <label for="UrlUsuario">URL </label>
+        <input type="url" id="UrlUsuario" name="UrlUsuario" placeholder="Escribe la URL de tu pagina personal">
+        <br><br>
+        <label for="fechaUser">Fecha </label>
+        <input type="date" name="fechaUser" id="fechaUser">
+        <br><br>
+        <label for="tiempoUsuario">Tiempo </label>
+        <input type="time" name="tiempoUsuario" id="tiempoUsuario">
+        <br><br>
+        <label for="FechayhoraUser">Fecha y hora </label>
+        <!--<input type="datetime" name="FechayhoraUser" id="FechayhoraUser">-->
+        <input type="datetime-local" name="FechayhoraUser" id="FechayhoraUser">
+        <br><br>
+        <label for="monthUser">Mes </label>
+        <input type="month" name="monthUser" id="monthUser">
+        <br><br>
+        <label for="semanaUser">Semana </label>
+        <input type="week" name="semanaUser" id="semanaUser">
+        <br><br>
+        <label for="numUsuario">Numero </label>
+        <input type="number" name="numUsuario" id="numUsuario" min="-10" max="10">
+        <br><br>
+        <label for="telUser">Telefono </label>
+        <input type="tel" name="telUser" id="telUser">
+        <br><br>
+        <label for="searchUser">Termino de busqueda </label>
+        <input type="search" name="searchUser" id="searchUser">
+        <br><br>
+        <label for="colorUser">Color favorito </label>
+        <input type="color" name="colorUser" id="colorUser">
+        <br><br>
+        <button type="submit">Enviar</button>
+
+    </form>
+</body>
+</html>
