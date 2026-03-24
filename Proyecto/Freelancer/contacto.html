@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto – Jose Antonio</title>
+    <link rel="preload" href="./css/normalize.css" as="style">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="preload" href="./css/contactoStyles.css" as="style">
+    <link rel="stylesheet" href="./css/contactoStyles.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1 class="titulo">Jose Antonio <span>Freelancer</span></h1>
+    </header>
+
+    <!-- NAV -->
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="./index.html">Inicio</a>
+            <a href="./sobremi.html">Sobre mi</a>
+            <a href="./clientes.html">Clientes</a>
+            <a href="./contacto.html">Contactos</a>
+        </nav>
+    </div>
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+        <h2 class="hero-banner__titulo">Contacto</h2>
+        <p class="hero-banner__subtitulo">Estoy aqui para ayudarte con tu proximo proyecto</p>
+    </section>
+
+    <!-- FORMULARIO + INFO -->
+    <section class="seccion contenedor">
+        <div class="contacto-grid">
+
+            <!-- Formulario -->
+            <div class="formulario-card sombra">
+                <h3 class="formulario-card__titulo">Enviar mensaje</h3>
+
+                <div class="campo">
+                    <label class="campo__label" for="nombre">Nombre</label>
+                    <input class="campo__input" type="text" id="nombre" placeholder="Tu nombre completo">
+                </div>
+
+                <div class="campo">
+                    <label class="campo__label" for="email">Email</label>
+                    <input class="campo__input" type="email" id="email" placeholder="tu@email.com">
+                </div>
+
+                <div class="campo">
+                    <label class="campo__label" for="servicio">Servicio de interes</label>
+                    <select class="campo__input campo__select" id="servicio">
+                        <option value="" disabled selected>Selecciona un servicio</option>
+                        <option value="diseno">Diseno Web</option>
+                        <option value="desarrollo">Desarrollo Web</option>
+                        <option value="ecommerce">E-Commerce</option>
+                        <option value="movil">Aplicaciones Moviles</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label class="campo__label" for="mensaje">Mensaje</label>
+                    <textarea class="campo__input campo__textarea" id="mensaje" placeholder="Cuentame sobre tu proyecto..."></textarea>
+                </div>
+
+                <button class="boton boton--primario">Enviar mensaje</button>
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="info-col">
+
+                <!-- Info de contacto -->
+                <div class="info-card sombra">
+                    <h3 class="info-card__titulo">Informacion de contacto</h3>
+
+                    <div class="info-item">
+                        <div class="info-item__icono">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="info-item__nombre">Email</p>
+                            <p class="info-item__valor">contacto@joseantonio.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-item__icono">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <p class="info-item__nombre">WhatsApp</p>
+                            <p class="info-item__valor">+52 444 123 4567</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-item__icono">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="info-item__nombre">Ubicacion</p>
+                            <p class="info-item__valor">San Luis Potosi, Mexico</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contacto rápido WhatsApp -->
+                <div class="whatsapp-card">
+                    <div class="whatsapp-card__header">
+                        <i class="fa-regular fa-comment"></i>
+                        <span>Contacto rapido</span>
+                    </div>
+                    <p class="whatsapp-card__texto">¿Prefieres una respuesta inmediata? Escribeme directamente por WhatsApp.</p>
+                    <a href="#" target="_blank" class="boton boton--whatsapp">
+                        <i class="fa-regular fa-comment"></i> Escribir por WhatsApp
+                    </a>
+                </div>
+
+                <!-- Tiempo de respuesta -->
+                <div class="respuesta-card sombra">
+                    <div class="info-item">
+                        <div class="info-item__icono info-item__icono--sec">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <div>
+                            <p class="info-item__nombre">Tiempo de respuesta</p>
+                            <p class="info-item__valor">Respondo en menos de 24 horas</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAPA -->
+    <section class="seccion contenedor">
+        <h2 class="seccion__titulo">Ubicacion</h2>
+        <div class="mapa">
+            <!--<iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119480.52534461!2d-101.09180!3d22.15655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842aaa7ab49c6f19%3A0x501a36d4fbe8c40!2sSan%20Luis%20Potos%C3%AD%2C%20S.L.P.!5e0!3m2!1ses!2smx!4v1680000000000!5m2!1ses!2smx"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="San Luis Potosi, Mexico">
+            </iframe>-->
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__redes">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <p class="footer__copy">© 2026 Jose Antonio. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
