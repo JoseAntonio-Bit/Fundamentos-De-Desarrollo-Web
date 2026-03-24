@@ -1,0 +1,32 @@
+
+.cv-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+
+@media (min-width: 600px) and (max-width: 1199px) {
+    .cv-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cv-section:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .cv-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        max-width: 1400px;
+        margin: 0 auto 32px;
+    }
+}
