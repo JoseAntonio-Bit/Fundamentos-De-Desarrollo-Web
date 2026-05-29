@@ -1,0 +1,15 @@
+.tarea {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 8px 0;
+    width: 400px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tarea.completada {
+    background-color: #3498db;
+    color: white;
+}

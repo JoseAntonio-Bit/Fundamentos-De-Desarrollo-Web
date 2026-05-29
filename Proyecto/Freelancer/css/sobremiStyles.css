@@ -27,7 +27,7 @@ body {
 
 .boton {
     background-color: var(--primario);
-    color: var(--oscuro);
+    color: var(--blanco);
     padding: 1rem 3rem;
     margin-top: 1rem;
     font-size: 2rem;

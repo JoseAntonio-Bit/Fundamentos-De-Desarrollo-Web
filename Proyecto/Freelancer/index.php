@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,24 +14,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <!--Agregar fuentes externas con google fonts-->
     <link rel="preload" href="./css/homeStyles.css" as="style">
     <link rel="stylesheet" href="./css/homeStyles.css">
 </head>
 
 <body>
+
+
     <header>
         <h1 class="titulo">Jose Antonio <span>Freelancer</span></h1>
         <!--Una vez por achivo, usualmente se usa asi para los navegadores-->
     </header>
 
     <div class="nav-bg">
-        <nav class="navegacion-principal contenedor"><!--Puedes colocar mas clases solo usando espacios SOLO CLASES-->
-            <a href="#">Inicio</a>
-            <a href="./sobremi.html">Sobre mi</a>
-            <a href="./clientes.html">Clientes</a>
-            <a href="./contacto.html">Contactos</a>
-        </nav>
+        <?php include 'includes/navbar.php'; ?>
     </div>
 
     <section class="hero">
@@ -45,7 +47,7 @@
                 </p>
 
             </div>
-            <a class="boton" href="#">Contactar</a>
+            <a class="boton" href="./contacto.php">Contactar</a>
         </div>
     </section>
 
@@ -67,11 +69,10 @@
                         <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
                     </svg>
                 </div>
+                    Diseño de páginas modernas, responsivas y atractivas para negocios y marcas personales.
 
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore sunt tenetur cumque ipsam suscipit
-                    voluptas,
-                    quasi dolor modi necessitatibus eos itaque impedit quam? Culpa possimus quas distinctio, quo dolor
-                    inventore.
+                    Creo interfaces limpias y adaptables para computadoras, tablets y móviles, enfocadas en mejorar la experiencia del usuario y transmitir una imagen profesional.
+                <p>
                 </p>
             </section>
 
@@ -97,10 +98,10 @@
                         <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2" />
                     </svg>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore sunt tenetur cumque ipsam suscipit
-                    voluptas,
-                    quasi dolor modi necessitatibus eos itaque impedit quam? Culpa possimus quas distinctio, quo dolor
-                    inventore.
+                <p>
+                    Desarrollo de sistemas web dinámicos y funcionales a la medida.
+
+                    Construyo aplicaciones web con bases de datos, autenticación de usuarios, paneles administrativos y funcionalidades personalizadas utilizando arquitecturas organizadas como MVC.
                 </p>
             </section>
 
@@ -115,52 +116,30 @@
                         <path d="M11 15l2 0" />
                     </svg>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore sunt tenetur cumque ipsam suscipit
-                    voluptas,
-                    quasi dolor modi necessitatibus eos itaque impedit quam? Culpa possimus quas distinctio, quo dolor
-                    inventore.
+                <p>
+                    Tiendas en línea funcionales para vender productos o servicios.
+
+                    Implemento plataformas de comercio electrónico con catálogos, carrito de compras, gestión de productos y sistemas de pago básicos o simulados.
                 </p>
             </section>
         </div>
-
-
-        <section>
-            <h2>Contacto</h2> <!--Normalmente cuando se tienen h1,h2... se utilizan sections-->
-
-            <form class="formulario" action="" method="get">
-                <fieldset><!--normalmente se usa para agregar un "titulo al formulario"-->
-                    <legend>Contactanos llenando todos los campos </legend>
-                    <div class="contenedor-campos">
-                        <div class="campo">
-                            <label for="">Tu nombre</label>
-                            <input class="input-text" type="text" name="" id="" placeholder="Tu nombre">
-                        </div>
-
-                        <div class="campo">
-                            <label for="">Telefono</label>
-                            <input class="input-text" type="tel" name="" id="">
-                        </div>
-
-                        <div class="campo">
-                            <label for="">Correo</label>
-                            <input class="input-text" type="email" name="" id="">
-                        </div>
-
-                        <div class="campo">
-                            <label for="">Mensaje</label>
-                            <textarea class="input-text" name="" id=""></textarea><!--Se utilza para garndes areas de texto-->
-                        </div>
-                        <div class="enviar">
-                            <input class="boton" type="submit" value="Enviar"> <!--Otra manera de hacer botones-->
-                        </div>
-
-                </fieldset>
-            </form>
-        </section>
     </main>
 
-    <footer>
-        <p>Todos los derechos reservados, Jose Antonio Freelancer</p>
+        <!-- CTA -->
+    <section class="cta">
+        <h2 class="cta__titulo">¿Quieres trabajar conmigo?</h2>
+        <p class="cta__subtitulo">Estoy listo para ayudarte a llevar tu proyecto al siguiente nivel.</p>
+        <a href="./contacto.php" class="boton">Contactame</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__redes">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <p class="footer__copy">© 2026 Jose Antonio. Todos los derechos reservados.</p>
     </footer>
 </body>
 

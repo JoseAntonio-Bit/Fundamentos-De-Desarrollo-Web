@@ -1,3 +1,8 @@
+<?php
+session_start();
+// Esto es obligatorio para que el PHP sepa quién es el usuario
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,12 +25,7 @@
     </header>
 
     <div class="nav-bg">
-        <nav class="navegacion-principal contenedor">
-            <a href="./index.html">Inicio</a>
-            <a href="./sobremi.html">Sobre mi</a>
-            <a href="./clientes.html">Clientes</a>
-            <a href="#">Contactos</a>
-        </nav>
+        <?php include 'includes/navbar.php'; ?>
     </div>
 
     <section class="hero-banner">
@@ -41,8 +41,8 @@
             </div>
             <div class="bio__texto">
                 <h3 class="bio__nombre">Hola, soy Jose Antonio</h3>
-                <p>Soy un estudiante de negocios internacionales apasionado por el desarrollo web y la tecnologia. Me especializo en crear soluciones digitales que ayudan a las empresas a crecer en el mundo digital.</p>
-                <p>Desde San Luis Potosi, Mexico, trabajo con clientes locales e internacionales, ofreciendo servicios de diseno web, desarrollo de aplicaciones y soluciones de e-commerce.</p>
+                <p>Soy un estudiante de Sistemas Inteligentes de la Universidad Autonoma de San Luis Potosi, apasionado por el desarrollo web y la tecnologia. Me especializo en crear soluciones digitales que ayudan a las empresas a crecer en el mundo digital.</p>
+                <p>Desde San Luis Potosi, Mexico, trabajo con clientes locales, ofreciendo servicios de diseno web, desarrollo de aplicaciones y soluciones de e-commerce.</p>
                 <p>Mi objetivo es combinar mis conocimientos en negocios con mi pasion por la tecnologia para ofrecer soluciones completas y efectivas a mis clientes.</p>
             </div>
         </div>

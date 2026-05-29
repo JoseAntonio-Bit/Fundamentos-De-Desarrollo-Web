@@ -1,3 +1,8 @@
+<?php
+session_start();
+// Esto es obligatorio para que el PHP sepa quién es el usuario
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,12 +27,7 @@
 
     <!-- NAV -->
     <div class="nav-bg">
-        <nav class="navegacion-principal contenedor">
-            <a href="./index.html">Inicio</a>
-            <a href="./sobremi.html">Sobre mi</a>
-            <a href="./clientes.html">Clientes</a>
-            <a href="./contacto.html">Contactos</a>
-        </nav>
+        <?php include 'includes/navbar.php'; ?>
     </div>
 
     <!-- HERO BANNER -->
@@ -70,7 +70,9 @@
                     <textarea class="campo__input campo__textarea" id="mensaje" placeholder="Cuentame sobre tu proyecto..."></textarea>
                 </div>
 
-                <button class="boton boton--primario">Enviar mensaje</button>
+                <button class="boton boton--primario" id="btn-enviar">Enviar mensaje</button>
+
+                <div id="respuesta"></div>
             </div>
 
             <!-- Columna derecha -->
@@ -168,5 +170,82 @@
         <p class="footer__copy">© 2026 Jose Antonio. Todos los derechos reservados.</p>
     </footer>
 
+<!--Scripts para la vista de contacto-->
+
+<script>
+document.getElementById("btn-enviar").addEventListener("click", function() {
+
+    const nombre   = document.getElementById("nombre").value.trim();
+    const email    = document.getElementById("email").value.trim();
+    const servicio = document.getElementById("servicio").value;
+    const mensaje  = document.getElementById("mensaje").value.trim();
+    const respuesta = document.getElementById("respuesta");
+
+    // Validación básica
+    if (!nombre || !email || !mensaje) {
+        respuesta.style.color = "red";
+        respuesta.textContent = "Por favor completa todos los campos obligatorios.";
+        return;
+    }
+
+    // Bloquear botón mientras envía
+    const btn = document.getElementById("btn-enviar");
+    btn.disabled = true;
+    btn.textContent = "Enviando...";
+
+    const datos = new FormData();
+    datos.append("nombre", nombre);
+    datos.append("email", email);
+    datos.append("servicio", servicio);
+    datos.append("mensaje", mensaje);
+
+    fetch("includes/enviar_mensaje.php", {
+        method: "POST",
+        body: datos
+    })
+    .then(async (res) => {
+
+        const text = await res.text();
+        console.log("RESPUESTA RAW:", text);
+
+        try {
+            return JSON.parse(text);
+        } catch (e) {
+            throw new Error("Respuesta inválida del servidor");
+        }
+
+    })
+    .then(data => {
+
+        if (data.exito) {
+            respuesta.style.color = "green";
+            respuesta.textContent = "✓ " + data.mensaje;
+
+            document.getElementById("nombre").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("servicio").value = "";
+            document.getElementById("mensaje").value = "";
+        } 
+        else {
+            respuesta.style.color = "red";
+            respuesta.textContent = "✗ " + data.mensaje;
+        }
+
+    })
+    .catch((err) => {
+        console.error(err);
+        respuesta.style.color = "red";
+        respuesta.textContent = "Error de conexión o respuesta inválida.";
+    })
+    .finally(() => {
+        btn.disabled = false;
+        btn.textContent = "Enviar";
+    });
+
+});
+</script>
+
 </body>
+
+
 </html>

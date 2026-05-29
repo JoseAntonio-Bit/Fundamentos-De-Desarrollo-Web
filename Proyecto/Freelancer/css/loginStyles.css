@@ -1,0 +1,24 @@
+:root { --primario: #0097a7; --amarillo: #ffc107; --oscuro: #333; }
+
+body { font-family: 'Krub', sans-serif; margin: 0; background-color: #eef2f7; }
+
+/* Header y Hero (mismos que tus otras vistas) */
+.titulo { text-align: center; padding: 2rem; }
+.titulo span {
+    font-size: 2rem;
+    color: var(--oscuro);
+}
+.hero-banner { background-color: var(--primario); color: white; text-align: center; padding: 4rem 2rem; }
+
+.login-container { display: flex; justify-content: center; padding: 4rem 2rem; }
+
+.login-form { background: white; width: 100%; max-width: 450px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden; }
+
+.login-header { background: #666; color: white; padding: 1.5rem; text-align: center; font-weight: bold; }
+
+.input-group { padding: 1.5rem 1.5rem 0.5rem; }
+.input-field { display: flex; align-items: center; border: 1px solid #ccc; padding: 0.8rem; margin-top: 0.5rem; border-radius: 4px; }
+.input-field i { margin-right: 10px; color: #888; }
+.input-field input { border: none; outline: none; width: 100%; }
+
+.btn-login { background: var(--amarillo); border: none; width: 90%; margin: 1.5rem 5%; padding: 1rem; cursor: pointer; font-weight: bold; border-radius: 4px; }

@@ -229,6 +229,82 @@ body {
     width: 100%;
 }
 
+.cta {
+    background-color: var(--secundario);
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.cta__titulo {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--blanco);
+    margin-bottom: 1.2rem;
+}
+
+.cta__subtitulo {
+    font-size: 1.6rem;
+    color: var(--blanco);
+    margin-bottom: 3rem;
+}
+
+.footer {
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+}
+
+.footer__redes {
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.footer__redes a {
+    color: var(--blanco);
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer__redes a:hover {
+    color: var(--primario);
+}
+
+.footer__copy {
+    font-size: 1.3rem;
+    color: var(--gris);
+}
+
+.boton {
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+    display: inline-block;
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: var(--primario);
+    color: var(--oscuro);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .boton { width: auto; }
+}
+
 /*.campo input[type="text"],
 .campo input[type=tel],
 {
